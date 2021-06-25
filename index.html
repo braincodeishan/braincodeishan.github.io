@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/dropdown.css">
+    <link rel="stylesheet" href="assets/CSS/animate.css">
+    <link rel="stylesheet" href="assets/CSS/slider.css">
+    <!-- Unused Stylesheets
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="undefined" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> -->
+    <title>Cross-Check</title>
+</head>
+
+<body>
+    <div class="bg-container"></div>
+    <div class="main-container">
+
+        <p>Search my Best-Buy Phone between my budget</p>
+        <div class="column-body">
+            <div class="row-body">
+                <div class="price-slider">
+                    <span>
+                        <p>FROM</p>
+                        <span>
+                            <i class="fa fa-inr" aria-hidden="true"></i>
+                            <input type="number" value="5000" min="0" max="120000" class="minval" />
+                            <i class="fa fa-chevron-down pos1" aria-hidden="true"></i>
+                            <div class="easypick" id="minval">
+                                <ul>
+                                    <li>Rs. 0</li>
+                                    <li>Rs. 1000</li>
+                                    <li>Rs. 2000</li>
+                                    <li>Rs. 5000</li>
+                                    <li>Rs. 10000</li>
+                                    <li>Rs. 15000</li>
+                                    <li>Rs. 20000</li>
+                                    <li>Rs. 25000</li>
+                                    <li>Rs. 30000</li>
+                                    <li>Rs. 35000</li>
+                                    <li>Rs. 40000</li>
+                                    <li>Rs. 50000</li>
+                                    
+                                </ul>
+                            </div>
+                        </span>
+                        <p>TO</p>
+                        <span>
+                            <i class="fa fa-inr" aria-hidden="true"></i>
+                            
+                            <input type="number" value="50000" min="0" max="120000" class="maxval"/>
+                            <i class="fa fa-chevron-down pos1" aria-hidden="true"></i>
+                            <div class="easypick" id="maxval">
+                                <ul>
+                                    <li>Rs. 0</li>
+                                    <li>Rs. 1000</li>
+                                    <li>Rs. 2000</li>
+                                    <li>Rs. 5000</li>
+                                    <li>Rs. 10000</li>
+                                    <li>Rs. 15000</li>
+                                    <li>Rs. 20000</li>
+                                    <li>Rs. 25000</li>
+                                    <li>Rs. 30000</li>
+                                    <li>Rs. 35000</li>
+                                    <li>Rs. 40000</li>
+                                    <li>Rs. 50000</li>
+                                    
+                                </ul>
+                            </div>
+                        </span>
+                    </span>
+                    <input value="25000" min="0" max="120000" step="500" type="range" class="minslider"/>
+                    <input value="50000" min="0" max="120000" step="500" type="range" class="maxslider"/>
+                    
+                </div>
+
+
+
+                
+                
+            </div>
+            
+        </div>
+        <i class="fa fa-arrow-down fa-1x" id="advanceview" aria-hidden="true"></i>
+        <div class="advance-search" id="advancesearch">
+            <div class="row-selector">
+                <div class="selector-text">Filter By Processors</div>
+                <select multiple data-placeholder="Select Processors" class="dropdown__multiSelect">
+                    <option value="0">Snapdragon 888</option>
+                    <option value="1" selected>Snapdragon 850</option>
+                    <option value="2">Mali 350</option>
+                    <option value="3">Intel i9</option>
+                    <option value="4">AMD Ryzen</option>
+                </select>
+            </div>
+            <div class="row-selector">
+                <div class="selector-text">Filter By RAM</div>
+                <select multiple data-placeholder="Select RAM" class="dropdown__multiSelect">
+                    <option value="0">4GB</option>
+                    <option value="1" selected>6GB</option>
+                    <option value="2">8GB</option>
+                    <option value="3">12GB</option>
+                    <option value="4">2GB<sub>(Least Selected)</su>
+                    </option>
+                </select>
+            </div>
+            <div class="row-selector">
+                <div class="selector-text">Filter By display</div>
+                <select multiple data-placeholder="Select Display" class="dropdown__multiSelect">
+                    <option value="0">AMOLED 60Hz</option>
+                    <option value="1" selected>AMOLED 90Hz</option>
+                    <option value="2">AMOLED 120Hz</option>
+                    <option value="3">LCD 60Hz</option>
+                    <option value="4">LCD 90Hz</option>
+                    <option value="5">LCD 120Hz</option>
+                </select>
+            </div>
+            <div class="row-selector">
+                <div class="selector-text">Filter By Color</div>
+                <select multiple data-placeholder="Select Color" class="dropdown__multiSelect">
+                    <option value="0">Girly-Pink</option>
+                    <option value="1" selected>Macho-Black</option>
+                    <option value="2">Bloody-Red</option>
+                    <option value="3">Morning-Blues</option>
+                    <option value="4">I dont fucking know</option>
+                </select>
+            </div>
+
+        </div>
+        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+    </div>
+    <!-- </div> -->
+
+
+
+
+    <i class="fa fa-chevron-up animate__animated animate__slideInDown animate__infinite" id="footerview"
+        aria-hidden="true"></i>
+
+
+
+
+    <div class="footer-dark" id="footerdark">
+
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="item text">
+                    <h3>Company Details</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui autem nostrum natus sapiente
+                        amet laborum officiis mollitia ipsum incidunt, quas accusantium veritatis nisi neque
+                        quibusdam quod maiores deserunt fugiat repudiandae, quis eum? Fugit delectus excepturi iure
+                        necessitatibus pariatur ea commodi corporis dolor. Vel cupiditate animi sit quidem fuga
+                        illum distinctio nesciunt. Delectus neque aperiam obcaecati quo sapiente? Fuga labore
+                        veritatis animi ullam architecto earum officia molestiae, quisquam, voluptate nam corrupti
+                        voluptatem consectetur iste repellat hic sed expedita nemo id suscipit laborum facilis
+                        cupiditate at. Soluta id dolorem molestias reiciendis temporibus, fuga harum sequi ut ea rem
+                        repudiandae quidem ab impedit!</p>
+                </div>
+            </div>
+            <div class="item social">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </div>
+        </div>
+        <p class="copyright">X-CHECK © 2020</p>
+
+
+    </div>
+
+
+    <script src="assets/Scripts/script.js"></script>
+    <script src="assets/Scripts/dropdown.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="test/script.js"></script>
+    <!-- unused script
+    <script src="/assets/Scripts/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="undefined"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="undefined"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.esm.min.js" integrity="undefined"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+</body>
+
+</html>
