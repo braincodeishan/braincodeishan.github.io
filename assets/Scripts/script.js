@@ -16,6 +16,19 @@
         
     })
 
+    fa_bars.addEventListener('click',function(){
+        nav_layer_3.classList.add('active');
+        nav_layer_2.classList.add('active');
+        nav_layer_1.classList.add('active');
+        nav_top_content.classList.add('active');
+    })
+    fa_times.addEventListener('click',function(){
+        nav_layer_3.classList.remove('active');
+        nav_layer_2.classList.remove('active');
+        nav_layer_1.classList.remove('active');
+        nav_top_content.classList.remove('active');
+    })
+
     var pos1=document.querySelectorAll(".pos1")
     
     pos1.forEach(pos1 =>{
