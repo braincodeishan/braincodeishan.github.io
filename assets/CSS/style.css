@@ -21,7 +21,7 @@ body {
     align-items: center;
     margin: 0;
     /* justify-content: center; */
-    overflow-x: hidden;
+    overflow: hidden;
     /* background-image: url('/assets/img/body-bg-main1.png'); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,14 +57,18 @@ h6 {
 }
 .top-nav-container-logo{
     position: relative;
-    height:30px;
-    margin:5px;
+    /* height:30px; */
+    
     background-color: var(--third-color);
+    
     z-index: 5;
 
 }
 .top-nav-container-logo img{
-    width:150px
+    padding:50px;
+    margin-top: 100px;
+    width: 600px;
+    /* transform: translate(0, -50%); */
 }
 
 .nav__bars{
@@ -108,6 +112,7 @@ height: 100vh;
 }
 .nav__bars .nav_top_content img{
     width:150px;
+    margin-top: 20px;
 }
 .nav__bars .nav_top_content ul li{
     
@@ -202,6 +207,7 @@ margin-left: -20px;
     display: flex;
     flex-direction: column;
     width: 60vw;
+    max-width: 900px;
     height: auto;
     background-color: var(--secondary-color);
     border-radius: 10px;
@@ -209,7 +215,7 @@ margin-left: -20px;
     justify-content: center;
     z-index: 0;
     transition: all 0.7s linear;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .column-body {
@@ -329,6 +335,7 @@ margin-left: -20px;
     z-index: 10;
     transition: 2s;
     cursor: pointer;
+    transform: translate(-50%,0);
 }
 
 #footerview:hover {
