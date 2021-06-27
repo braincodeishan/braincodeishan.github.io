@@ -28,6 +28,16 @@
         nav_layer_1.classList.remove('active');
         nav_top_content.classList.remove('active');
     })
+    document.querySelector('#colorpick').addEventListener('click', (e)=>{
+        document.querySelector('.color-picker').classList.toggle('active');
+
+    })
+    function colorChange(priCol,secCol)
+    {
+        var r = document.querySelector(':root');
+        r.style.setProperty('--primary-color', priCol);
+        r.style.setProperty('--secondary-color', secCol);
+    }
 
     var pos1=document.querySelectorAll(".pos1")
     
