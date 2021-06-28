@@ -3,7 +3,7 @@
 
     footerview.addEventListener('click',function(){
         
-        footerdark.classList.toggle('active');
+        foot_view.classList.toggle('active');
         footerview.classList.toggle('active');
         footerview.classList.toggle('animate__delay-3s');
         footerview.classList.toggle('animate__animated');
@@ -13,6 +13,7 @@
     advanceview.addEventListener('click',function(){
         advancesearch.classList.toggle('active');
         advanceview.classList.toggle('active');
+        nav_logo.classList.toggle('active');
         
     })
 
@@ -21,12 +22,14 @@
         nav_layer_2.classList.add('active');
         nav_layer_1.classList.add('active');
         nav_top_content.classList.add('active');
+        foot_view.classList.toggle('active');
     })
     fa_times.addEventListener('click',function(){
         nav_layer_3.classList.remove('active');
         nav_layer_2.classList.remove('active');
         nav_layer_1.classList.remove('active');
         nav_top_content.classList.remove('active');
+        foot_view.classList.toggle('active');
     })
     document.querySelector('#colorpick').addEventListener('click', (e)=>{
         document.querySelector('.color-picker').classList.toggle('active');
