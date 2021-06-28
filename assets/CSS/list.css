@@ -1,0 +1,99 @@
+.top-nav-container-logo-min{
+    display: flex;
+    
+    height:65px;
+    /* border-bottom:1px solid #000; */
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+
+}
+.top-nav-container-logo-min svg{
+    font-size: 150px;
+    margin: -35px 0px;
+    height:150px;
+    width: auto;
+    
+}
+
+.top-nav-container-logo-min > svg .st1 {
+    fill: var(--primary-color); 
+}
+
+.top-nav-container-logo-min .svg-color{
+    fill: #878787;
+    /* fill: var(--primary-color); */
+}
+.list-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-main-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+    z-index: 0;
+    width:90%;
+}
+.list-main-container .filter-bar{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+    margin-right: 20px;
+}
+.list-main-container .right-container .item{
+    display: flex;
+    flex-direction: column;
+    padding:15px 50px;
+    border-radius: 5px;
+    /* border: 2px solid var(--primary-color); */
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+    margin:5px 15px;
+}
+/* .list-main-container .right-container .item:hover{
+    background-color: var(--primary-color)
+    
+
+} */
+.list-main-container .right-container .row-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.list-main-container .right-container .item .mob-specs{
+    display: flex;
+    flex-direction: row;
+}
+.list-main-container .right-container .item .mob-specs ul{
+    list-style: none;
+
+}
+
+.list-main-container .right-container .item .mob-specs ul li:nth-of-type(even){
+font-size: 12px;
+/* margin-left:10px; */
+}
+
+.list-main-container .right-container .item .mob-specs ul div{
+    display: flex;
+    flex-direction: row;
+    margin:5px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.list-main-container .right-container .item .mob-specs ul div .fa{
+    width:25px;
+    color: var(--primary-color);
+}
+.list-main-container .right-container .item .mob-specs ul div span{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
