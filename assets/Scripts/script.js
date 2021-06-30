@@ -170,3 +170,69 @@ if(advanceview!=null){
             }
             })
         })
+
+        var samplepictures=document.querySelectorAll('.samplepictures');
+        var pictureclose=document.querySelectorAll('.pictureclose');
+        samplepictures.forEach(samplepictures =>{
+            samplepictures.addEventListener('click',(e)=>{
+                samplepictures.parentNode.parentNode.querySelector('.camera-picture-class').classList.add('active');
+            })
+        })
+        pictureclose.forEach(pictureclose =>{
+            pictureclose.addEventListener('click',(e)=>{
+                pictureclose.parentNode.classList.remove('active');
+            })
+        })
+
+
+
+
+
+        var picturenext=document.querySelectorAll('.picturenext');
+        var pictureprev=document.querySelectorAll('.pictureprev');
+        picturenext.forEach(picturenext =>{
+            picturenext.addEventListener('click',(e)=>{
+                var picture=picturenext.parentNode.querySelectorAll('img');
+                var j=0;
+                for(var i=0;i<picture.length;i++){
+                    if(picture[i].classList.contains('active')){
+                        picture[i].classList.remove('active');
+                        i++;
+                        break;
+                    }
+                }
+                
+                if(i<picture.length){
+                    picture[i].classList.add('active');
+                }else{
+                    i=0;
+                    picture[i].classList.add('active');
+                }
+                })
+            })
+
+
+
+            
+        pictureprev.forEach(pictureprev =>{
+            pictureprev.addEventListener('click',(e)=>{
+                var picture=pictureprev.parentNode.querySelectorAll('img');
+                var j=0;
+                for(var i=0;i<picture.length;i++){
+                    if(picture[i].classList.contains('active')){
+                        picture[i].classList.remove('active');
+                        i++;
+                        break;
+                    }
+                }
+                
+                if(i>-1){
+                    picture[i].classList.add('active');
+                }else{
+                    i=picture.length-1;
+                    picture[i].classList.add('active');
+                }
+                })
+            })
+        
+     
