@@ -275,7 +275,7 @@ color: var(--secondary-color);
 
 
 .camera-picture-class{
-    position: absolute;
+    position: fixed;
     display: flex;
     visibility: hidden;
     opacity: 0;
