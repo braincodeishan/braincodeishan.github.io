@@ -267,7 +267,7 @@ if(advanceview!=null){
                 var minvalue=document.getElementById('minvalue').value;
                 var maxvalue=document.getElementById('maxvalue').value;
                 console.log(minvalue,maxvalue);
-                const result = await fetch('http://localhost:3000/search', {
+                const result = await fetch('https://dop-ishan.herokuapp.com/search', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
