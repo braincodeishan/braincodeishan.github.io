@@ -1,37 +1,39 @@
-body{
-    background-color: #f1f1f1;
-}
-.top-nav-container-logo-min{
+
+/* .top-nav-container-logo-min{
     display: flex;
     
     height:65px;
     /* border-bottom:1px solid #000; */
-    width: 100vw;
+    /* width: 100vw;
     align-items: center;
     justify-content: center;
     box-shadow: 5px 5px 200px rgb(0,0,0,0.4);
 
-}
-.top-nav-container-logo-min svg{
+} */
+/* .top-nav-container-logo-min svg{
     font-size: 150px;
     margin: -35px 0px;
     height:150px;
     width: auto;
     
-}
+} */
 
-.top-nav-container-logo-min > svg .st1 {
+/* .top-nav-container-logo-min > svg .st1 {
     fill: var(--primary-color); 
-}
+} */
 
-.top-nav-container-logo-min .svg-color{
-    fill: #878787;
+/* .top-nav-container-logo-min .svg-color{
+    fill: #878787; */
     /* fill: var(--primary-color); */
-}
+/* }  */
 .list-main{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    background-color: #f1f1f1;
+}
+.list-main.enabled{
+    display: flex;
 }
 .list-main-container{
     display: flex;
@@ -101,6 +103,15 @@ min-width: 1200px;
     color: #fff;
     font-size: 20px;
 }
+/* .list-main-container .right-container .row-items .item .compare-me input{
+    outline: none;
+    height: 15px;
+    width:15px;
+    border: none;
+}
+.list-main-container .right-container .row-items .item .compare-me input:focus{
+color: aqua;
+} */
 
 .list-main-container .right-container .row-items .item .compare-me p{
     text-transform: uppercase;
@@ -341,4 +352,48 @@ border-radius: 10px;
 }
 .camera-picture-class .camera-picture-row img.active{
     display: block;
+}
+.buynow{
+    cursor: pointer;
+}
+.buy-now-class{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    /* align-items: center; */
+    width: 80%;
+}
+.buy-now-class.active{
+    display: flex;
+}
+.buy-now-class .dropdown-row{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.buy-now-class .dropdown-row .amazon, .buy-now-class .dropdown-row .flipkart, .buy-now-class .dropdown-row .snapdeal, .buy-now-class .dropdown-row .paytm, .buy-now-class .dropdown-row .tatacliq, .buy-now-class .dropdown-row .companysite {
+    background-color: var(--fourth-color);
+    padding:5px 10px;
+    margin: 5px 20px 5px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 10%;
+    cursor: pointer;
+}
+.buy-now-class .dropdown-row button:hover{
+    background-color: var(--primary-color);
+}
+.buy-now-class .dropdown-row p{
+    width: 30%;
+}
+.buy-now-class .dropdown-row .fa{
+    padding: 5px;
+    font-size: 25px;
+    color: #878787;
 }

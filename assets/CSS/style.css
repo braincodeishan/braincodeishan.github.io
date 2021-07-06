@@ -336,6 +336,9 @@ margin-left: -20px;
     align-items: center;
     justify-content: center;
 }
+.main-class.disabled{
+  display: none;
+}
 .main-container {
     display: flex;
     flex-direction: column;
