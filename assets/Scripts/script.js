@@ -1,41 +1,41 @@
 // const footer=document.getElementById('footerview');
 // const footerMain=document.getElementById('footerdark');
 
-    var footerview=document.querySelector('#footerview');
-    var foot_view=document.querySelector('#foot_view');
-    var advanceview=document.querySelector('#advanceview');
-    var advancesearch=document.querySelector('#advancesearch');
-    var nav_logo=document.querySelector('#nav_logo');
-    var fa_bars=document.querySelector('#fa_bars');
-    var nav_layer_3=document.querySelector('#nav_layer_3');
-    var nav_layer_2=document.querySelector('#nav_layer_2');
-    var nav_layer_1=document.querySelector('#nav_layer_1');
-    var nav_top_content=document.querySelector('#nav_top_content');
-    var foot_view=document.querySelector('#foot_view');
-    var fa_times=document.querySelector('#fa_times');
-    
-    if(footerview!=null){
-    footerview.addEventListener('click',function(){
-        
+var footerview = document.querySelector('#footerview');
+var foot_view = document.querySelector('#foot_view');
+var advanceview = document.querySelector('#advanceview');
+var advancesearch = document.querySelector('#advancesearch');
+var nav_logo = document.querySelector('#nav_logo');
+var fa_bars = document.querySelector('#fa_bars');
+var nav_layer_3 = document.querySelector('#nav_layer_3');
+var nav_layer_2 = document.querySelector('#nav_layer_2');
+var nav_layer_1 = document.querySelector('#nav_layer_1');
+var nav_top_content = document.querySelector('#nav_top_content');
+var foot_view = document.querySelector('#foot_view');
+var fa_times = document.querySelector('#fa_times');
+
+if (footerview != null) {
+    footerview.addEventListener('click', function () {
+
         foot_view.classList.toggle('active');
         footerview.classList.toggle('active');
         footerview.classList.toggle('animate__delay-3s');
         footerview.classList.toggle('animate__animated');
         footerview.classList.toggle('animate__flip');
-        
+
     })
 }
-if(advanceview!=null){
-    advanceview.addEventListener('click',function(){
+if (advanceview != null) {
+    advanceview.addEventListener('click', function () {
         advancesearch.classList.toggle('active');
         advanceview.classList.toggle('active');
         nav_logo.classList.toggle('active');
-        
+
     })
 }
-    
-    if(fa_bars!=null){
-    fa_bars.addEventListener('click',function(){
+
+if (fa_bars != null) {
+    fa_bars.addEventListener('click', function () {
         nav_layer_3.classList.add('active');
         nav_layer_2.classList.add('active');
         nav_layer_1.classList.add('active');
@@ -44,271 +44,161 @@ if(advanceview!=null){
     })
 }
 
-    if(fa_times!=null){
-    fa_times.addEventListener('click',function(){
+if (fa_times != null) {
+    fa_times.addEventListener('click', function () {
         nav_layer_3.classList.remove('active');
         nav_layer_2.classList.remove('active');
         nav_layer_1.classList.remove('active');
         nav_top_content.classList.remove('active');
         foot_view.classList.toggle('active');
     })
-    }
+}
 
-    document.querySelector('#colorpick').addEventListener('click', (e)=>{
-        document.querySelector('.color-picker').classList.toggle('active');
+document.querySelector('#colorpick').addEventListener('click', (e) => {
+    document.querySelector('.color-picker').classList.toggle('active');
 
+})
+function colorChange(priCol, secCol) {
+    var r = document.querySelector(':root');
+    r.style.setProperty('--primary-color', priCol);
+    r.style.setProperty('--secondary-color', secCol);
+}
+
+var pos1 = document.querySelectorAll(".pos1")
+
+pos1.forEach(pos1 => {
+    pos1.addEventListener('click', (e) => {
+        console.log(pos1.nextElementSibling);
+        pos1.nextElementSibling.classList.toggle('active');
     })
-    function colorChange(priCol,secCol)
-    {
-        var r = document.querySelector(':root');
-        r.style.setProperty('--primary-color', priCol);
-        r.style.setProperty('--secondary-color', secCol);
-    }
+    document.body.addEventListener('click', (e) => {
+        if (e.target != pos1) {
+            pos1.nextElementSibling.classList.remove('active');
+        }
+    })
+})
 
-    var pos1=document.querySelectorAll(".pos1")
-    
-    pos1.forEach(pos1 =>{
-        pos1.addEventListener('click', (e)=>{
-            console.log(pos1.nextElementSibling);
-            pos1.nextElementSibling.classList.toggle('active');
-        })
-        document.body.addEventListener('click', (e)=>{
-            if(e.target!=pos1)
-            {
-                pos1.nextElementSibling.classList.remove('active');
+
+
+var pos2 = document.querySelectorAll(".easypick ul");
+var minval = document.querySelector(".minval");
+var maxval = document.querySelector(".maxval");
+var minslider = document.querySelector(".minslider");
+var maxslider = document.querySelector(".maxslider");
+pos2.forEach(ul => {
+    ul.addEventListener('click', (e) => {
+        let li = e.target.closest('li');
+        if (!li) { return; }
+        let val = li.textContent;
+        let len = val.length;
+        let final = parseInt(val.substring(4, len));
+        if (e.target.closest('div').id == 'minval') {
+            if (final < maxval.value) {
+                minval.value = final;
+                minslider.value = final;
+            } else {
+                minval.value = maxval.value;
+                minslider.value = maxval.value;
+                maxval.value = final;
+                maxslider.value = final;
             }
+        } else {
+            if (final > minval.value) {
+                maxval.value = final;
+                maxslider.value = final;
+            } else {
+                maxval.value = minval.value;
+                maxslider.value = minval.value;
+                minval.value = final;
+                minslider.value = final;
+            }
+        }
+    })
+})
+
+
+
+
+
+
+
+
+// var buynow=document.querySelectorAll('.buynow');
+// buynow.forEach(buynow =>{
+//     buynow.addEventListener('click', (e)=>{
+//         buynow.parentNode.parentNode.querySelector('.specs-class').classList.add('remove');
+//         buynow.parentNode.parentNode.querySelector('.user-review-class').classList.remove('active');
+//         buynow.parentNode.parentNode.querySelector('.buy-now-class').classList.add('active');
+
+//     })
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+// Rendering of the data main funtions
+
+// const form = document.getElementById('searchmyphone')
+// form.addEventListener('submit', searcher)
+
+async function searcher() {
+    // e.preventDefault();
+    var minvalue = document.getElementById('minvalue').value;
+    var maxvalue = document.getElementById('maxvalue').value;
+    console.log(minvalue, maxvalue);
+    const result = await fetch('http://localhost:3000/search', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            minvalue,
+            maxvalue
+        })
+    }).then((res) => res.json())
+    console.log(result);
+    document.querySelector(".top-nav-container-logo").classList.add("active");
+    document.body.style.overflowY = 'scroll';
+    var page1 = document.getElementById('homepagemainclass');
+    page1.classList.add('disabled');
+    var page2 = document.getElementById('listpagemainclass');
+    page2.classList.add('enabled');
+    var footerscroll = document.getElementById('foot_view');
+    footerscroll.classList.add('scroll');
+    
+    renderlistResults(result);
+
+}
+
+function renderlistResults(result) {
+
+    var joinedHtml = ""
+
+    result.map((item) => {
+        joinedHtml += listresults({
+            ...item
         })
     })
 
+    const content = document.getElementById("listofitems");
+    content.innerHTML = "";
+    content.insertAdjacentHTML("beforeend", joinedHtml);
 
-    
-    var pos2=document.querySelectorAll(".easypick ul");
-    var minval=document.querySelector(".minval");
-    var maxval=document.querySelector(".maxval");
-    var minslider=document.querySelector(".minslider");
-    var maxslider=document.querySelector(".maxslider");
-    pos2.forEach(ul =>{
-        ul.addEventListener('click', (e)=>{
-            let li=e.target.closest('li');
-            if (!li) { return; }
-            let val=li.textContent;
-            let len=val.length;
-            let final=parseInt(val.substring(4, len));
-            if(e.target.closest('div').id=='minval'){
-                if(final<maxval.value){
-                minval.value=final;
-                minslider.value=final;
-                }else{
-                    minval.value=maxval.value;
-                    minslider.value=maxval.value;
-                    maxval.value=final;
-                    maxslider.value=final;
-                }
-            }else{
-                if(final>minval.value){
-                maxval.value=final;
-                maxslider.value=final;
-                }else{
-                    maxval.value=minval.value;
-                    maxslider.value=minval.value;
-                    minval.value=final;
-                    minslider.value=final;
-                }
-            }
-        })
-        })
-
-
-        var userrating=document.querySelectorAll('.userrating');
-        userrating.forEach(userrating =>{
-            userrating.addEventListener('click', (e)=>{
-                userrating.parentNode.parentNode.querySelector('.specs-class').classList.add('remove');
-                userrating.parentNode.parentNode.querySelector('.buy-now-class').classList.remove('active');
-                userrating.parentNode.parentNode.querySelector('.user-review-class').classList.add('active');
-
-            })
-        })
-
-        var commentnext=document.querySelectorAll('.commentnext1');
-        var commentprev=document.querySelectorAll('.commentprev1');
-        commentnext.forEach(commentnext1 =>{
-            commentnext1.addEventListener('click',(e)=>{
-                var comment=commentnext1.parentNode.querySelectorAll('p');
-                var j=0;
-                for(var i=0;i<comment.length;i++){
-                    if(comment[i].classList.contains('active')){
-                        comment[i].classList.remove('active');
-                        i++;
-                        break;
-                    }
-                }
-                console.log(i);
-                if(i<comment.length){
-                    comment[i].classList.add('active');
-                }else{
-                    i=0;
-                    comment[i].classList.add('active');
-                }
-                })
-            })
-        
-        commentprev.forEach(commentprev1 =>{
-            commentprev1.addEventListener('click',(e)=>{
-                var comment=commentprev1.parentNode.querySelectorAll('p');
-                var j=0;
-                for(var i=0;i<comment.length;i++){
-                    if(comment[i].classList.contains('active')){
-                        comment[i].classList.remove('active');
-                        i--;
-                        break;
-                    }
-                }
-                if(i>-1){
-                comment[i].classList.add('active');
-            }else{
-                i=comment.length-1;
-                comment[i].classList.add('active');
-            }
-            })
-        })
-
-        var samplepictures=document.querySelectorAll('.samplepictures');
-        var pictureclose=document.querySelectorAll('.pictureclose');
-        samplepictures.forEach(samplepictures =>{
-            samplepictures.addEventListener('click',(e)=>{
-                samplepictures.parentNode.parentNode.querySelector('.camera-picture-class').classList.add('active');
-            })
-        })
-        pictureclose.forEach(pictureclose =>{
-            pictureclose.addEventListener('click',(e)=>{
-                pictureclose.parentNode.classList.remove('active');
-            })
-        })
+}
 
 
 
 
-
-        var picturenext=document.querySelectorAll('.picturenext');
-        var pictureprev=document.querySelectorAll('.pictureprev');
-        picturenext.forEach(picturenext =>{
-            picturenext.addEventListener('click',(e)=>{
-                var picture=picturenext.parentNode.querySelectorAll('img');
-                var j=0;
-                for(var i=0;i<picture.length;i++){
-                    if(picture[i].classList.contains('active')){
-                        picture[i].classList.remove('active');
-                        i++;
-                        break;
-                    }
-                }
-                
-                if(i<picture.length){
-                    picture[i].classList.add('active');
-                }else{
-                    i=0;
-                    picture[i].classList.add('active');
-                }
-                })
-            })
-
-
-
-            
-        pictureprev.forEach(pictureprev =>{
-            pictureprev.addEventListener('click',(e)=>{
-                var picture=pictureprev.parentNode.querySelectorAll('img');
-                var j=0;
-                for(var i=0;i<picture.length;i++){
-                    if(picture[i].classList.contains('active')){
-                        picture[i].classList.remove('active');
-                        i--;
-                        break;
-                    }
-                }
-                
-                if(i>-1){
-                    picture[i].classList.add('active');
-                }else{
-                    i=picture.length-1;
-                    picture[i].classList.add('active');
-                }
-                })
-            })
-        
-            var buynow=document.querySelectorAll('.buynow');
-            buynow.forEach(buynow =>{
-                buynow.addEventListener('click', (e)=>{
-                    buynow.parentNode.parentNode.querySelector('.specs-class').classList.add('remove');
-                    buynow.parentNode.parentNode.querySelector('.user-review-class').classList.remove('active');
-                    buynow.parentNode.parentNode.querySelector('.buy-now-class').classList.add('active');
-    
-                })
-            })
-
-
-
-
-
-
-
-
-
-
-
-
-            // Rendering of the data main funtions
-
-            // const form = document.getElementById('searchmyphone')
-			// form.addEventListener('submit', searcher)
-
-            async function searcher(){
-                // e.preventDefault();
-                var minvalue=document.getElementById('minvalue').value;
-                var maxvalue=document.getElementById('maxvalue').value;
-                console.log(minvalue,maxvalue);
-                const result = await fetch('https://dop-ishan.herokuapp.com/search', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify({
-						minvalue,
-						maxvalue
-					})
-				}).then((res) => res.json())
-                console.log(result);
-                document.querySelector(".top-nav-container-logo").classList.add("active");
-                var page1=document.getElementById('homepagemainclass');
-                page1.classList.add('disabled');
-                var page2=document.getElementById('listpagemainclass');
-                page2.classList.add('enabled');
-                renderlistResults(result);
-
-            }
-
-            function renderlistResults(result){
-
-                var joinedHtml = ""
-            
-                result.map((item)=>{
-                    joinedHtml+= listresults({
-                        ...item
-                    })
-                })
-            
-                const content = document.getElementById("listofitems");
-                content.innerHTML="";
-               content.insertAdjacentHTML("beforeend", joinedHtml);
-            
-            }
-
-
-
-
-            function listresults(data)
-            {
-                var listpagetemplate=`<div class="item item-1">
+function listresults(data) {
+    var listpagetemplate = `<div class="item item-1" id="${data._id}">
                 <div class="compare-me">
                     <p>${data.name}</p>
                     <input type="checkbox" name="compare"> Compare
@@ -523,18 +413,18 @@ if(advanceview!=null){
                                     doloremque quia quos adipisci, veritatis perspiciatis corrupti earum saepe
                                     cumque perferendis nemo facilis error autem? Explicabo laboriosam, quaerat
                                     veniam reiciendis earum dolor illum nemo. Laboriosam, maxime odit odio autem
-                                    cupiditate sit!</p>
+                                    cupiditate sit!11111111</p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat maxime
                                     sapiente officiis animi obcaecati odio deserunt, quasi aliquid reiciendis
-                                    consequuntur!</p>
+                                    consequuntur!2222222</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
                                     exercitationem aspernatur nostrum iste quaerat eius magnam reprehenderit
-                                    deleniti possimus dignissimos?</p>
+                                    deleniti possimus dignissimos?3333333</p>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ut deleniti
-                                    maxime repellendus quaerat quisquam nihil explicabo in incidunt nostrum.</p>
+                                    maxime repellendus quaerat quisquam nihil explicabo in incidunt nostrum.444444</p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus
                                     facilis omnis aperiam. Eligendi repudiandae vero quo? Mollitia, quo
-                                    voluptatibus!</p>
+                                    voluptatibus!555555</p>
                                 <span>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -555,7 +445,7 @@ if(advanceview!=null){
                         </div>
                         <div class="camera-picture-class">
                             <i class="fa fa-times-circle-o pictureclose" aria-hidden="true"></i>
-                            <i class="fa fa-chevron-left pictureprev" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-left pictureprev" onclick="picturenext('${data._id}',-1)" aria-hidden="true"></i>
                             <div class="camera-picture-row">
 
                                 <img src="assets/img/phone_pictures/34347448.jpg" class="active" alt=""
@@ -568,7 +458,7 @@ if(advanceview!=null){
 
 
                             </div>
-                            <i class="fa fa-chevron-right picturenext" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-right picturenext" onclick="picturenext('${data._id}',1)" aria-hidden="true"></i>
                         </div>
                         <div class="buy-now-class">
                             <div class="dropdown-row">
@@ -602,14 +492,137 @@ if(advanceview!=null){
                     </div>
                 </div>
                 <div class="lower-tabs">
-                    <p class="userrating">User Rating</p>
-                    <p class="specsrating">Specs Rating</p>
-                    <p class="samplepictures">Sample Pictures</p>
-                    <p class="otherreview">Reviews</p>
-                    <p class="buynow">Buy Now</p>
+                    <p class="specs" onClick="specs('${data._id}')">Specs</p>
+                    <p class="userrating" onClick="userrating('${data._id}')">User Rating</p>
+                    <p class="specsrating" onClick="specsrating('${data._id}')">Specs Rating</p>
+                    <p class="samplepictures" onClick="samplepictures('${data._id}')">Sample Pictures</p>
+                    <p class="buynow" onClick="buynow('${data._id}')">Buy Now</p>
 
                 </div>
 
             </div>`
-            return listpagetemplate;
+    return listpagetemplate;
+}
+
+
+function userrating(i) {
+    var id = document.getElementById(i);
+    id.querySelector('.specs-class').classList.add('remove');
+    id.querySelector('.buy-now-class').classList.remove('active');
+    id.querySelector('.user-review-class').classList.add('active');
+
+    var commentnext = id.querySelector('.commentnext1');
+    var commentprev = id.querySelector('.commentprev1');
+
+    commentnext.addEventListener('click', (e) => {
+        var comment = commentnext.parentNode.querySelectorAll('p');
+        var j = 0;
+        for (var i = 0; i < comment.length; i++) {
+            if (comment[i].classList.contains('active')) {
+                comment[i].classList.remove('active');
+                i++;
+                break;
             }
+        }
+        console.log(i);
+        if (i < comment.length) {
+            comment[i].classList.add('active');
+        } else {
+            i = 0;
+            comment[i].classList.add('active');
+        }
+    })
+
+
+
+    commentprev.addEventListener('click', (e) => {
+        var comment = commentprev.parentNode.querySelectorAll('p');
+        var j = 0;
+        for (var i = 0; i < comment.length; i++) {
+            if (comment[i].classList.contains('active')) {
+                comment[i].classList.remove('active');
+                i--;
+                break;
+            }
+        }
+        if (i > -1) {
+            comment[i].classList.add('active');
+        } else {
+            i = comment.length - 1;
+            comment[i].classList.add('active');
+        }
+    })
+
+}
+
+
+
+
+function specsrating(i) {
+
+
+
+
+
+}
+function samplepictures(i) {
+    var id=document.getElementById(i);
+    
+    var pictureclose=id.querySelector('.pictureclose');
+    id.querySelector('.camera-picture-class').classList.toggle('active');
+        
+    var i=0;        
+        
+
+    var picturenext=id.querySelector('.picturenext');
+    var pictureprev=id.querySelector('.pictureprev');
+    
+    pictureclose.addEventListener('click',(e)=>{
+        picturenext.removeEventListener('click',()=>{})
+        pictureprev.removeEventListener('click',()=>{})
+        pictureclose.parentNode.classList.remove('active');
+        console.log("closed")
+        
+    })
+}
+
+function picturenext(i,j){
+        // picturenext.addEventListener('click',(e)=>{
+            // console.log("event listner added")
+            var id=document.getElementById(i)
+            var pictureclass=id.querySelector('.camera-picture-class');
+            var picture=pictureclass.querySelectorAll('img');
+            i=0;
+            for(i=0;i<picture.length;i++){
+                if(picture[i].classList.contains('active')){
+                    picture[i].classList.remove('active');
+                    
+                    break;
+                }
+            }
+            i=i+j;
+            
+            if(i>=picture.length){
+                i=0;
+            }else if(i<=-1){
+                i=picture.length-1;
+            }
+            picture[i].classList.add('active');
+}
+
+function buynow(i) {
+    var id=document.getElementById(i);
+    
+            id.querySelector('.specs-class').classList.add('remove');
+            id.querySelector('.user-review-class').classList.remove('active');
+            id.querySelector('.buy-now-class').classList.add('active');
+    
+        
+}
+
+function specs(i) {
+    var id=document.getElementById(i);
+    id.querySelector('.specs-class').classList.remove('remove');
+    id.querySelector('.user-review-class').classList.remove('active');
+    id.querySelector('.buy-now-class').classList.remove('active');
+}
