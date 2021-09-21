@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.m-logo{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgb(204, 204, 204);
+
+}
+.m-logo-1{
+    height: 70px;
+}
+.m-logo-2{
+    height:150px;
+    /* color: black; */
+}
+
+
+.m-body{
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+      
+}
+.m-body-1{
+    background: rgb(243, 243, 243);
+    margin: 100px 0 100px 0;
+    padding: 70px;
+}
+
+.m-body-2{
+    height:500px;
+}
+
+.m-login-form{
+    max-width: 80%;
+    
+
+}
+
+.navbar img{
+    padding-left:50px;
+}
+
+.navbar li{
+    padding-left: 40px;
+
+}
+.navbar li:last-of-type{
+    position: absolute;
+    right:100px;
+    
+}
+
+.m-footer-main{
+    padding-top: 20px;
+    background-color: rgb(21, 21, 31);
+    margin: 0px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.m-footer-main a{
+    text-decoration: none;
+    color: #fff;
+}
+.m-indiapost-logo{
+    margin-top: 0px;
+    margin-left: 10px;
+}
