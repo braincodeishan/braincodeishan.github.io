@@ -29,14 +29,41 @@ body{
     align-items: center;
       
 }
-.m-body-1{
+.m-body-index{
     background: rgb(243, 243, 243);
     margin: 100px 0 100px 0;
     padding: 70px;
 }
 
-.m-body-2{
-    height:500px;
+.m-body-dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.m-body-changepassword{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.m-body-leaderboard{
+    background: rgb(243, 243, 243);
+    margin: 20px 0 50px 0;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+}
+.m-body-leaderboard .card{
+    margin: 10px;
+    min-width: 500px;
+}
+.m-body-leaderboard .m-row{
+    display: flex;
+    flex-direction: row!important;
 }
 
 .m-login-form{
@@ -54,8 +81,8 @@ body{
 
 }
 .navbar li:last-of-type{
-    position: absolute;
-    right:100px;
+    float: right;
+    
     
 }
 
@@ -75,4 +102,99 @@ body{
 .m-indiapost-logo{
     margin-top: 0px;
     margin-left: 10px;
+}
+
+.dashboardbox{
+    position: relative;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    box-shadow: 1px 1px 10px rgb(204, 204, 204);
+    margin: 40px 20px 40px 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: width 0.7s ease-in-out;
+
+}
+.dashboardbox.selected{
+    width: 400px;
+}
+.dashboardbox.selected ul{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+.dashboardbox.selected h5{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dashboardbox li{
+    text-decoration: none;
+    list-style: none;
+    text-align:justify
+}
+
+.dashboardbox h4{
+    text-align: center;
+    margin: 70px 0px 10px 0px;
+    
+}
+.dashboardbox .fa-3x{
+    /* width: inherit; */
+    align-self: center;
+    position: absolute;
+    top: 10px;
+}
+
+.dashboardbox ul{
+    display: none;
+    transition: all 0.7s ease-in;
+    /* transition: visibility 0.3s ease-in; */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dashboardbox h5{
+    display: none;
+    transition: opacity 0.7s ease-in;
+    /* transition: visibility 0.3s ease-in; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+}
+.dashboardbox a{
+    text-decoration: none;
+    color: #000;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    transition: all 0.5s ease-in;
+}
+
+.dashboardbox a:hover{
+color: rgb(51, 127, 240);
+}
+
+.user-icon{
+    position: absolute;
+    right: 40px;
+    top: 10px;
+}
+
+.m-body-leaderboard h3{
+    background-color: rgb(235, 235, 235);
+    color: rgb(41, 41, 41);
+}
+
+.m-sq-box{
+    border-radius: 5px;
+    border: 0.5px dashed rgba(0,0,0,0.2);
+    padding: 10px;
+    margin: 10px;
 }

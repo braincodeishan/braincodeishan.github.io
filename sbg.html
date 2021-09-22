@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/Assets/stylesheets/style.css">
   <title>AP Circle||Indiapost</title>
 </head>
@@ -80,80 +79,64 @@
 
     </div>
   </nav>
-  <div class="container-fluid m-body m-body-dashboard">
-    <div class="dashboardbox selected">
-      <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
-      <h4>Non Performing Offices</h4>
-      <h5>Savings Bank</h5>
-      <ul>
-        <li>Sodam SO</li>
-        <li>B Camp SO</li>
-        <li>Atmakur SO</li>
+  <div class="container-fluid m-body m-body-index">
+    <div class="container">
+      <div class="row col align-self-center">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <h3><i class="fa fa-lock fa-4x"></i></h3>
+                  <h2 class="text-center">Change Password?</h2>
+                  <p>You can change your password here.</p>
+                  <div class="panel-body">
 
-      </ul>
-      <h5>Insurance</h5>
-      <ul>
-        <li>District Collectorate SO</li>
-        <li>SAP Camp SO</li>
-        <li>Dhone SO</li>
+                    <form class="form">
+                      <fieldset>
+                        <div class="form-group">
+                          <div class="input-group" style="margin: 10px;">
+                            <span class="input-group-addon"><i
+                                class="glyphicon glyphicon-envelope color-blue"></i></span>
 
-      </ul>
-      <a href="#">View More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            <input id="oldpass" placeholder="Enter Your Old Password" class="form-control"
+                              type="password" oninvalid="setCustomValidity('Please enter a valid email address!')"
+                              onchange="try{setCustomValidity('')}catch(e){}" required="">
+
+                          </div>
+                          <div class="input-group" style="margin: 10px;">
+                            <span class="input-group-addon"><i
+                                class="glyphicon glyphicon-envelope color-blue"></i></span>
+
+                            <input id="newpass" placeholder="Enter Your New Password" class="form-control"
+                              type="password" oninvalid="setCustomValidity('Please enter a valid email address!')"
+                              onchange="try{setCustomValidity('')}catch(e){}" required="">
+
+                          </div>
+                          <div class="input-group" style="margin: 10px;">
+                            <span class="input-group-addon"><i
+                                class="glyphicon glyphicon-envelope color-blue"></i></span>
+
+                            <input id="confpass" placeholder="Confirm Password" class="form-control" type="password"
+                              oninvalid="setCustomValidity('Please enter a valid email address!')"
+                              onchange="try{setCustomValidity('')}catch(e){}" required="">
+
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input class="btn btn-lg btn-primary btn-block" value="Change My Password" type="submit">
+                        </div>
+                      </fieldset>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="dashboardbox">
-      <i class="fa fa-list-ol fa-3x" aria-hidden="true"></i>
-      <h4>My Performance</h4>
-      <h5>Strong Zone</h5>
-      <ul>
-        <li>Insurance</li>
-        <li>Non POSB Target</li>
-      </ul>
-      <h5>Weak Zone</h5>
-      <ul>
-        <li>POSB</li>
-        <li></li>
-        <li></li>
-
-      </ul>
-      <a href="#">View More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-    </div>
-    <div class="dashboardbox">
-      <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-      <h4>Performance Zone</h4>
-      <h5>Opening of POSB Accounts</h5>
-      <ul>
-        <li>XYZ BO</li>
-        <li>ABC BO</li>
-        <li>DEF BO</li>
-      </ul>
-      <h5>Enrollment to PM Schemes</h5>
-      <ul>
-        <li>XYZ BO</li>
-        <li>ABC BO</li>
-        <li>DEF BO</li>
-
-      </ul>
-      <a href="#">View More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-    </div>
-    <div class="dashboardbox">
-      <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
-      <h4>Time-Lines</h4>
-      <h5>02.10.2021</h5>
-      <ul>
-        <li>Gandhi Jayanti</li>
-      </ul>
-      <h5>10.10.2021</h5>
-      <ul>
-        <li>POSB Drive</li>
-      </ul>
-      <h5>17.10.2021</h5>
-      <ul>
-        <li>PM Schemes Drive</li>
-      </ul>
-      <a href="#">View More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-    </div>
-
-
 
 
   </div>
@@ -276,7 +259,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="/Assets/scripts/script.js"></script>
 
 </body>
 
