@@ -31,8 +31,6 @@ function removePosbCategoryActive() {
     return id;
 }
 posb_overall.addEventListener('click', () => {
-
-
     var id = removePosbCategoryActive();
     posb_overall.classList.add('active');
     activeData(id);
@@ -65,7 +63,39 @@ function activeData(id) {
     buttonid.classList.add('active')
     
 }
+function activeRpliData(id) {
+    const findid = document.getElementsByClassName(id);
+    const buttonid = document.getElementById(id);
+    const posb = document.getElementsByClassName('posb');
+    const buttonposb = document.getElementsByClassName('buttonposb');
+    for (i = 0; i < posb.length; i++) {
+        posb[i].classList.remove('active');
+    }
+    for (i = 0; i < buttonposb.length; i++) {
+        buttonposb[i].classList.remove('active');
+    }
+//    console.log(findid);
+    findid[0].classList.add('active');
+    
+    buttonid.classList.add('active');
+    
+}
 
 
-
-
+function activePMData(id) {
+    const findid = document.getElementsByClassName(id);
+    const buttonid = document.getElementById(id);
+    const posb = document.getElementsByClassName('posb');
+    const buttonposb = document.getElementsByClassName('buttonposb');
+    for (i = 0; i < posb.length; i++) {
+        posb[i].classList.remove('active');
+    }
+    for (i = 0; i < buttonposb.length; i++) {
+        buttonposb[i].classList.remove('active');
+    }
+//    console.log(findid);
+    findid[0].classList.add('active');
+    
+    buttonid.classList.add('active');
+    
+}

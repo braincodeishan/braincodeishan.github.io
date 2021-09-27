@@ -28,11 +28,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="dashboard.html">Home</a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link" href="#">Leaderboard</a>
+          <a class="nav-link" href="leaderboard.html">Leaderboard</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -40,10 +40,10 @@
             Savings Bank
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Opening of POSB Accounts</a>
-            <a class="dropdown-item" href="#">Enrollment to PM Schemes</a>
+            <a class="dropdown-item" href="posbaccounts.html">Opening of POSB Accounts</a>
+            <a class="dropdown-item" href="pmscheme.html">Enrollment to PM Schemes</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Top Performers</a>
+            <a class="dropdown-item" href="leaderboard.html">Top Performers</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -52,11 +52,11 @@
             Insurance
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Premia Collection</a>
-            <a class="dropdown-item" href="#">SBG Villages</a>
-            <a class="dropdown-item" href="#">Min. 2 Policies per BO</a>
+            <a class="dropdown-item" href="premium.html">Premia Collection</a>
+            <a class="dropdown-item" href="sbg.html">SBG Villages</a>
+            <a class="dropdown-item" href="2policyperbo.html">Min. 2 Policies per BO</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Top Performers</a>
+            <a class="dropdown-item" href="leaderboard.html">Top Performers</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -65,8 +65,8 @@
             Manager
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Change Password</a>
-            <a class="dropdown-item" href="#">Manage My profile</a>
+            <a class="dropdown-item" href="changepassword.html">Change Password</a>
+            <a class="dropdown-item" href="profile.html">Manage My profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Logout</a>
           </div>
@@ -138,22 +138,22 @@
       </div>
     </div>
 
-    <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <!-- <div class="btn-group" role="group" aria-label="Basic outlined example">
       <button type="button" class="btn btn-outline-secondary active" id="posb_overall">Overall Performance</button>
       <button type="button" class="btn btn-outline-secondary" id="posb_scheme">Scheme Wise Performance</button>
-    </div>
+    </div> -->
     <!-- <div class="container-fluid m-body m-body-posb"> -->
     <div class="m-sq-box-posb">
 
       <div class="btn-group" role="group" aria-label="Basic outlined example">
-        <button type="button" class="btn btn-outline-primary active buttonposb" id="cregion" onclick="activeData('cregion')">Regional Performance</button>
-        <button type="button" class="btn btn-outline-primary buttonposb" id="cdvn" onclick="activeData('cdvn')">Divisional Performance</button>
-        <button type="button" class="btn btn-outline-primary buttonposb" id="csdn" onclick="activeData('csdn')">Sub-Divisional Performance</button>
-        <button type="button" class="btn btn-outline-primary buttonposb" id="cso" onclick="activeData('cso')">Sub Office Performance</button>
+        <button type="button" class="btn btn-outline-primary active buttonposb" id="jjby" onclick="activePMData('jjby')">PMJJBY</button>
+        <button type="button" class="btn btn-outline-primary buttonposb" id="sby" onclick="activePMData('sby')">PMSBY</button>
+        <button type="button" class="btn btn-outline-primary buttonposb" id="apy" onclick="activePMData('apy')">APY</button>
+        <!-- <button type="button" class="btn btn-outline-primary buttonposb" id="cso" onclick="activeData('cso')">Sub Office Performance</button> -->
         <!-- <button type="button" class="btn btn-outline-primary buttonposb" id="cbo" onclick="activeData('cbo')">Branch Office Performance</button> -->
       </div>
       <div class="posb_data_overall">
-        <div class="posb region cregion active" id="oregion" >
+        <div class="posb region jjby active" id="oregion" >
           <table class="table">
             <thead>
               <tr>
@@ -171,7 +171,7 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Kurnool Region</td>
+                <td>ABC SO</td>
                 <td>650</td>
                 <td>192</td>
                 <td>29.5</td>
@@ -182,7 +182,7 @@
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Vijayawada Region</td>
+                <td>DEF SO</td>
                 <td>540</td>
                 <td>89</td>
                 <td>16.5</td>
@@ -193,7 +193,7 @@
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Vishakhapatnam Region</td>
+                <td>GHI SO</td>
                 <td>480</td>
                 <td>34</td>
                 <td>7.1</td>
@@ -201,11 +201,60 @@
                 <td>79</td>
                 <td>6</td>
               </tr>
-
+              <tr>
+                <th scope="row">4</th>
+                <td>JKL SO</td>
+                <td>520</td>
+                <td>31</td>
+                <td>6.0</td>
+                <td>489</td>
+                <td>79</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>MNO SO</td>
+                <td>620</td>
+                <td>26</td>
+                <td>4.2</td>
+                <td>594</td>
+                <td>79</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>PQR SO</td>
+                <td>790</td>
+                <td>34</td>
+                <td>4.3</td>
+                <td>756</td>
+                <td>79</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>STU SO</td>
+                <td>790</td>
+                <td>34</td>
+                <td>4.3</td>
+                <td>756</td>
+                <td>79</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>VWX SO</td>
+                <td>790</td>
+                <td>34</td>
+                <td>4.3</td>
+                <td>756</td>
+                <td>79</td>
+                <td>10</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <div class="posb division cdvn" id="odvn">
+        <div class="posb division sby" id="odvn">
           <table class="table">
             <thead>
               <tr>
@@ -223,7 +272,7 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Kurnool Division</td>
+                <td>B CAMP SO</td>
                 <td>650</td>
                 <td>192</td>
                 <td>29.5</td>
@@ -234,7 +283,7 @@
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Anantapur Division</td>
+                <td>C CAMP SO</td>
                 <td>540</td>
                 <td>89</td>
                 <td>16.5</td>
@@ -245,7 +294,7 @@
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Chittoor Division</td>
+                <td>DHONE SO</td>
                 <td>480</td>
                 <td>34</td>
                 <td>7.1</td>
@@ -255,7 +304,7 @@
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td>Cuddapah Division</td>
+                <td>JALADURGAM SO</td>
                 <td>520</td>
                 <td>31</td>
                 <td>6.0</td>
@@ -265,7 +314,7 @@
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td>Hindupur Division</td>
+                <td>RANGAPURAM SO</td>
                 <td>620</td>
                 <td>26</td>
                 <td>4.2</td>
@@ -275,7 +324,7 @@
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>Nandyal Division</td>
+                <td>PENDEKAL SO</td>
                 <td>790</td>
                 <td>34</td>
                 <td>4.3</td>
@@ -285,7 +334,7 @@
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>Prodattur Division</td>
+                <td>PEAPULLY SO</td>
                 <td>790</td>
                 <td>34</td>
                 <td>4.3</td>
@@ -295,7 +344,7 @@
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>Tirupati Division</td>
+                <td>MADDIKERA SO</td>
                 <td>790</td>
                 <td>34</td>
                 <td>4.3</td>
@@ -306,88 +355,7 @@
             </tbody>
           </table>
         </div>
-        <div class="posb so csdn" id="osdn">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="row">POSITION</th>
-                <th>SDN NAME</th>
-                <th>TARGET</th>
-                <th>ACHIEVEMENT</th>
-                <th>%</th>
-                <th>SHORTFALL</th>
-                <th>WORKING DAYS REMAINING</th>
-                <th>NEW PERDAY TARGET</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Kurnool East Sdn</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                <td>458</td>
-                <td>79</td>
-                <td>6</td>
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Kurnool West Sdn</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-                <td>451</td>
-                <td>79</td>
-                <td>6</td>
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Adoni Sdn</td>
-                <td>480</td>
-                <td>34</td>
-                <td>7.1</td>
-                <td>446</td>
-                <td>79</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Dhone Sdn</td>
-                <td>520</td>
-                <td>31</td>
-                <td>6.0</td>
-                <td>489</td>
-                <td>79</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Nandikotkur Sdn</td>
-                <td>620</td>
-                <td>26</td>
-                <td>4.2</td>
-                <td>594</td>
-                <td>79</td>
-                <td>8</td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Yemmiganur Sdn</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-                <td>756</td>
-                <td>79</td>
-                <td>10</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="posb so cso" id="oso">
+        <div class="posb so apy" id="osdn">
           <table class="table">
             <thead>
               <tr>
@@ -405,7 +373,7 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Iruvaram SO</td>
+                <td>TUGGALI SO</td>
                 <td>650</td>
                 <td>192</td>
                 <td>29.5</td>
@@ -416,7 +384,7 @@
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>CTR Collectorate</td>
+                <td>MOGHLI SO</td>
                 <td>540</td>
                 <td>89</td>
                 <td>16.5</td>
@@ -427,7 +395,7 @@
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Gangadhara Nellore SO</td>
+                <td>NEMAKALLU SO</td>
                 <td>480</td>
                 <td>34</td>
                 <td>7.1</td>
@@ -437,7 +405,7 @@
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td>Penumur SO</td>
+                <td>NANDIKOTKUR SO</td>
                 <td>520</td>
                 <td>31</td>
                 <td>6.0</td>
@@ -447,7 +415,7 @@
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td>Thugundram SO</td>
+                <td>PRATHAKOTA SO</td>
                 <td>620</td>
                 <td>26</td>
                 <td>4.2</td>
@@ -457,7 +425,7 @@
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>V.R. Kuppam SO</td>
+                <td>ATMAKUR SO</td>
                 <td>790</td>
                 <td>34</td>
                 <td>4.3</td>
@@ -465,80 +433,19 @@
                 <td>79</td>
                 <td>10</td>
               </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="posb bo cbo" id="obo">
-          <table class="table">
-            <thead>
               <tr>
-                <th scope="row">POSITION</th>
-                <th>SO NAME</th>
-                <th>TARGET</th>
-                <th>ACHIEVEMENT</th>
-                <th>%</th>
-                <th>SHORTFALL</th>
-                <th>WORKING DAYS REMAINING</th>
-                <th>NEW PERDAY TARGET</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Chityala BO</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                <td>458</td>
-                <td>79</td>
-                <td>6</td>
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Sudepalli BO</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-                <td>451</td>
-                <td>79</td>
-                <td>6</td>
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Karivena BO</td>
-                <td>480</td>
+                <th scope="row">6</th>
+                <td>VELGODE SO</td>
+                <td>790</td>
                 <td>34</td>
-                <td>7.1</td>
-                <td>446</td>
+                <td>4.3</td>
+                <td>756</td>
                 <td>79</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Peravali BO</td>
-                <td>520</td>
-                <td>31</td>
-                <td>6.0</td>
-                <td>489</td>
-                <td>79</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Kothur BO</td>
-                <td>620</td>
-                <td>26</td>
-                <td>4.2</td>
-                <td>594</td>
-                <td>79</td>
-                <td>8</td>
+                <td>10</td>
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>Ungranigundla BO</td>
+                <td>DHONE BAZAR SO</td>
                 <td>790</td>
                 <td>34</td>
                 <td>4.3</td>
@@ -550,343 +457,7 @@
           </table>
         </div>
       </div>
-      <div class="posb_data_scheme">
-        <div class="posb region cregion" id="sregion">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="row">POSITION</th>
-                <th>SO NAME</th>
-                <th>PMJJBY</th>
-                <th>PMSBY</th>
-                <th>APY</th>
-                
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Kurnool Region</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Vijayawada Region</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-                
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Vishakhapatnam Region</td>
-                <td>480</td>
-                <td>34</td>
-                <td>7.1</td>
-                
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="posb division cdvn" id="sdvn">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="row">POSITION</th>
-                <th>SO NAME</th>
-                <th>PMJJBY</th>
-                <th>PMSBY</th>
-                <th>APY</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Kurnool Division</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                
-
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Anantapur Division</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-                
-
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Chittoor Division</td>
-                <td>480</td>
-                <td>34</td>
-                <td>7.1</td>
-                
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Cuddapah Division</td>
-                <td>520</td>
-                <td>31</td>
-                <td>6.0</td>
-                
-
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Hindupur Division</td>
-                <td>620</td>
-                <td>26</td>
-                <td>4.2</td>
-               
-
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Nandyal Division</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-               
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Prodattur Division</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-                
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Tirupati Division</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-                
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="posb so csdn" id="ssdn">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="row">POSITION</th>
-                <th>SO NAME</th>
-                <th>PMJJBY</th>
-                <th>PMSBY</th>
-                <th>APY</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Kurnool East Sdn</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                
-                
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Kurnool West Sdn</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-               
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Adoni Sdn</td>
-                <td>480</td>
-                <td>34</td>
-                <td>7.1</td>
-               
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Dhone Sdn</td>
-                <td>520</td>
-                <td>31</td>
-                <td>6.0</td>
-            
-
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Nandikotkur Sdn</td>
-                <td>620</td>
-                <td>26</td>
-                <td>4.2</td>
-              
-
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Yemmiganur Sdn</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-               
-
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="posb so cso" id="sso">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="row">POSITION</th>
-                <th>SO NAME</th>
-                <th>PMJJBY</th>
-                <th>PMSBY</th>
-                <th>APY</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Iruvaram SO</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>CTR Collectorate</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-                
-
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Gangadhara Nellore SO</td>
-                <td>480</td>
-                <td>34</td>
-                <td>7.1</td>
-              
-
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Penumur SO</td>
-                <td>520</td>
-                <td>31</td>
-                <td>6.0</td>
-                
-               
-
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Thugundram SO</td>
-                <td>620</td>
-                <td>26</td>
-                <td>4.2</td>
-              
-
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>V.R. Kuppam SO</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-                
-
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="posb bo cbo" id="sbo">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="row">POSITION</th>
-                <th>SO NAME</th>
-                <th>PMJJBY</th>
-                <th>PMSBY</th>
-                <th>APY</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Chityala BO</td>
-                <td>650</td>
-                <td>192</td>
-                <td>29.5</td>
-                
-                
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Sudepalli BO</td>
-                <td>540</td>
-                <td>89</td>
-                <td>16.5</td>
-               
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Karivena BO</td>
-                <td>480</td>
-                <td>34</td>
-                <td>7.1</td>
-               
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Peravali BO</td>
-                <td>520</td>
-                <td>31</td>
-                <td>6.0</td>
-              
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Kothur BO</td>
-                <td>620</td>
-                <td>26</td>
-                <td>4.2</td>
-              
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Ungranigundla BO</td>
-                <td>790</td>
-                <td>34</td>
-                <td>4.3</td>
-               
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      
     </div>
   </div>
   <!-- </div> -->
