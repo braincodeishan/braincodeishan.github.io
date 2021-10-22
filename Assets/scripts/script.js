@@ -30,17 +30,19 @@ function removePosbCategoryActive() {
 
     return id;
 }
+if(posb_overall.length>0){
 posb_overall.addEventListener('click', () => {
     var id = removePosbCategoryActive();
     posb_overall.classList.add('active');
     activeData(id);
-})
+})}
+if(posb_scheme.length>0){
 posb_scheme.addEventListener('click', () => {
 
     var id = removePosbCategoryActive();
     posb_scheme.classList.add('active');
     activeData(id);
-})
+})}
 
 function activeData(id) {
     const findid = document.getElementsByClassName(id);
@@ -99,3 +101,6 @@ function activePMData(id) {
     buttonid.classList.add('active');
     
 }
+
+
+

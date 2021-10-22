@@ -81,7 +81,7 @@
     </div>
   </nav>
 
-  
+
   <div class="container-fluid m-body m-body-dashboard">
     <div class="dashboardbox selected">
       <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
@@ -137,21 +137,62 @@
       </ul>
       <a href="#">View More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
     </div>
-    <div class="dashboardbox">
+    <div class="dashboardbox cltp">
       <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
-      <h4>Time-Lines</h4>
-      <h5>02.10.2021</h5>
-      <ul>
-        <li>Gandhi Jayanti</li>
-      </ul>
-      <h5>10.10.2021</h5>
-      <ul>
-        <li>POSB Drive</li>
-      </ul>
-      <h5>17.10.2021</h5>
-      <ul>
-        <li>PM Schemes Drive</li>
-      </ul>
+      <h4>Circle level top Performers</h4>
+      <h5>Opening of POSB Accounts</h5>
+
+
+      <div class="header-ticker">
+        <div class="ticker1 active">
+          <ul>
+            <li>Kothapalli BO  -  Rank I</li>
+            <li>Chityala BO  -  Rank II</li>
+            <li>Perumallapalle S.O  -  Rank III</li>
+          </ul>
+        </div>
+        <div class="ticker1">
+          <ul>
+            <li>Medikurthi S.O  -  Rank IV</li>
+            <li>Tarigonda S.O  -  Rank V</li>
+            <li>Vyalpad S.O  -  Rank VI</li>
+          </ul>
+        </div>
+        <div class="ticker1">
+          <ul>
+            <li>Gotkuru BO  -  Rank VII</li>
+            <li>Ipperu BO  -  Rank VIII</li>
+            <li>Vyalpad BO  -  Rank IX</li>
+          </ul>
+        </div>
+      </div>
+
+      <h5>Enrollment to PM Schemes</h5>
+      <div class="header-ticker">
+        <div class="ticker2 active">
+          <ul>
+            <li>Kadadarakunta BO  -  Rank I</li>
+            <li>Kallagalla BO  -  Rank II</li>
+            <li>Kammuru BO  -  Rank III</li>
+          </ul>
+        </div>
+        <div class="ticker2">
+          <ul>
+            <li>Korakodu BO  -  Rank IV</li>
+            <li>Marutla BO  -  Rank V</li>
+            <li>Tirumala BO  -  Rank VI</li>
+
+          </ul>
+        </div>
+        <div class="ticker2">
+          <ul>
+
+            <li>Cherlopalle BO  -  Rank VII</li>
+            <li>Chintaparthi BO  -  Rank VIII</li>
+            <li>Gurramkonda BO  -  Rank IX</li>
+          </ul>
+        </div>
+      </div>
       <a href="#">View More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
     </div>
 
@@ -279,7 +320,34 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="/Assets/scripts/script.js"></script>
+  <script src="/Assets/scripts/ticker.js"></script>
 
 </body>
+<script>
+  var myIndexx = 0;
+  var myIndexy = 0;
+  ticker();
+  function ticker() {
+    var x = document.getElementsByClassName("ticker1");
+    var y = document.getElementsByClassName("ticker2");
+
+    for (var i = 0; i < x.length; i++) {
+
+      x[i].classList.remove("active");
+    }
+    for (var i = 0; i < y.length; i++) {
+
+      y[i].classList.remove("active");
+    }
+    myIndexx++;
+    myIndexy++;
+    if (myIndexx > x.length) { myIndexx = 1 }
+    x[myIndexx - 1].classList.add("active");
+    if (myIndexy > y.length) { myIndexy = 1 }
+    y[myIndexy - 1].classList.add("active");
+    setTimeout(ticker, 2000);
+  }
+
+</script>
 
 </html>
