@@ -1,11 +1,127 @@
+:root{
+    --body-bg-color: rgba(32, 32, 32, 1);
+    --container-bg-color: rgba(32, 32, 32, 1);
+    --card-color:rgba(58,64,78,255);
+    --card-header-color: rgba(224,85,78,255);
+    --text-color:#fff;
+    --text-black-color:#000;
+    --heading3-color:rgba(250,103,85,255);
+    --header-footer:#000;
+    --dashing-line:rgba(255, 255, 255, 0.3)
+       
+}
+
 body {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    background-color: var(--body-bg-color);
+    overflow-x: hidden;
+}
+*{
+    color: var(--text-color);
+}
+
+
+
+.card{
+    background-color: var(--card-color);
+}
+.card-header{
+    background-color: var(--card-header-color);
+}
+/* .container{
+    background-color: var(--container-bg-color);
+}
+.container-fluid{
+    background-color: var(--container-bg-color)!important;
+} */
+.m-sq-box h3, .m-body-leaderboard h3, .m-body-posb h3{
+    background-color: var(--heading3-color)!important;
+    border-radius: 10px;
+    padding:5px 10px;
+    color: var(--text-color)!important;
 }
 
 
 /* Master Body Ends  */
+
+
+
+
+
+
+
+/* color picker starts  */
+.color-picker{
+    position: fixed;
+    bottom: 75px;
+    background-color: var(--text-color);
+    right:-140px;
+    height: 30px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px 0 0 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 18px #888888;
+    transition: all 0.7s ease;
+    z-index: 10!important;
+}
+.color-picker.active{
+    right:0;
+}
+.color-picker.active i:first-of-type{
+  transform: rotateY(180deg);
+}
+.color-picker i{
+    padding:5px;
+    border-radius: 50%;
+    
+    /* margin: 2px; */
+}
+.color-picker i:first-of-type{
+    margin-right: 15px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.color-picker i:hover{
+    font-size: 25px;
+}
+.color-picker i.aqua{
+    color: #2ec4b6;
+    /* border: solid 2px #2ec4b6; */
+}
+.color-picker i.blue{
+    color: #4A9ABD;
+    /* border: solid 2px #5f6364; */
+}
+.color-picker i.pink{
+    color: #DC63B6;
+    /* border: solid 2px #DC63B6; */
+}
+.color-picker i.bw{
+    color: #A46FFF;
+    /* border: solid 2px #A46FFF; */
+}
+.color-picker i.orange{
+    color: #A26227;
+    /* border: solid 2px #A26227; */
+}
+/* color picker Ends  */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Header Starts */
 
@@ -14,7 +130,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 10px rgb(204, 204, 204);
+    border-bottom:double 2px var(--card-header-color);
+    /* box-shadow: 1px 1px 10px var(--card-header-color); */
 }
 
 .m-logo-1 {
@@ -37,6 +154,9 @@ body {
 
 
 /* NAVBAR starts */
+.navbar{
+    background-color: var(--header-footer)!important;
+}
 
 .navbar img {
     padding-left: 50px;
@@ -67,15 +187,16 @@ body {
 
 .m-footer-main {
     padding-top: 20px;
-    background-color: rgb(21, 21, 31);
+    background-color: var(--header-footer)!important;
+    border-top:solid 2px var(--card-header-color) ;
     margin: 0px;
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .m-footer-main a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .m-indiapost-logo {
@@ -94,7 +215,7 @@ body {
 /* Index page Body starts */
 
 .m-body-index {
-    background: rgb(243, 243, 243);
+    background: var(--body-bg-color);
     margin: 50px 0 50px 0;
     padding: 70px;
     display: flex;
@@ -106,6 +227,23 @@ body {
 .m-login-form {
     max-width: 80%;
 }
+
+/* .mind-logo{
+    width:20vw;
+    height:auto;
+    color: thistle;
+    position: absolute;
+    right: 10%;
+    top:50%;
+    transform: translateY(-70%);
+}
+.bg-class{
+    position: absolute;
+    left: 15%;
+    top:50%;
+    transform: translateY(-70%);
+    color: rgb(6, 71, 80);
+} */
 
 /* Index page Body Ends */
 
@@ -131,11 +269,13 @@ body {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    box-shadow: 1px 1px 10px rgb(204, 204, 204);
+    /* box-shadow: 1px 1px 10px var(--card-header-color); */
+    border: solid 2px var(--card-header-color);
     margin: 40px 20px 40px 20px;
     padding: 10px;
     cursor: pointer;
     transition: width 0.7s ease-in-out;
+    background-color: var(--card-color);
 }
 
 .dashboardbox.selected {
@@ -169,6 +309,7 @@ body {
     align-self: center;
     position: absolute;
     top: 10px;
+    color: var(--card-header-color);
 }
 
 .dashboardbox ul {
@@ -183,14 +324,14 @@ body {
     transition: opacity 0.7s ease-in;
     opacity: 0;
     visibility: hidden;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--card-header-color);
+    color: var(--text-color);
     padding: 5px;
 }
 
 .dashboardbox a {
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -273,7 +414,7 @@ body {
 /* LEADERBOARD page Body starts */
 
 .m-body-leaderboard {
-    background: rgb(243, 243, 243);
+    background: var(--body-bg-color);
     margin: 20px 0 50px 0;
     padding: 70px 0px;
     display: flex;
@@ -302,13 +443,13 @@ body {
 }
 
 .m-body-leaderboard h3 {
-    background-color: rgb(235, 235, 235);
-    color: rgb(41, 41, 41);
+    background-color: var(--card-color);
+    color: var(--text-color);
 }
 
 .m-sq-box {
     border-radius: 5px;
-    border: 0.5px dashed rgba(0, 0, 0, 0.2);
+    border: 0.5px dashed var(--dashing-line);
     padding: 10px;
     margin: 10px;
     position: relative;
@@ -330,7 +471,7 @@ body {
 /* POSB page Body Starts */
 
 .m-body-posb {
-    background: rgb(243, 243, 243);
+    background: var(--body-bg-color);
     margin: 30px;
     padding: 30px;
     display: flex;
@@ -341,7 +482,7 @@ body {
 
 .m-sq-box-posb {
     border-radius: 5px;
-    border: 0.5px dashed rgba(0, 0, 0, 0.2);
+    border: 0.5px dashed var(--dashing-line);
     padding: 30px;
     margin: 0px 10px 50px 10px;
     display: flex;
@@ -350,13 +491,13 @@ body {
 
 .m-sq-box-posb:last-of-type {
     border-radius: 5px;
-    border: 0.5px dashed rgba(0, 0, 0, 0.2);
+    border: 0.5px dashed var(--dashing-line);
     padding: 10px 30px 30px 30px;
     margin: 20px 10px 10px 10px;
 }
 
 .m-sq-box-posb th, .m-sq-box-posb td {
-    border-right: 0.5px dashed rgba(0, 0, 0, 0.2);
+    border-right: 0.5px dashed var(--dashing-line);
     padding: 10px 20px;
     text-align: center;
 }

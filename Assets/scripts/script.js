@@ -1,3 +1,14 @@
+document.querySelector('#colorpick').addEventListener('click', (e) => {
+    document.querySelector('.color-picker').classList.toggle('active');
+
+})
+function colorChange(priCol, secCol) {
+    var r = document.querySelector(':root');
+    r.style.setProperty('--card-header-color', priCol);
+    r.style.setProperty('--heading3-color', secCol);
+}
+
+
 const dashboardboxs = document.querySelectorAll('.dashboardbox');
 dashboardboxs.forEach(dashboardbox => {
     dashboardbox.addEventListener('click', () => {
