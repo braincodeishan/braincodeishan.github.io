@@ -6,6 +6,8 @@ function colorChange(priCol, secCol) {
     var r = document.querySelector(':root');
     r.style.setProperty('--card-header-color', priCol);
     r.style.setProperty('--heading3-color', secCol);
+    window.localStorage.setItem('smartcolor1', priCol);
+    window.localStorage.setItem('smartcolor2', secCol);
 }
 
 
