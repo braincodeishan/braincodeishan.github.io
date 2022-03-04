@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="style.css">
 <body>
+    <button type="button" class="menu-button js-menu-trigger" aria-label="Click to open menu" onclick="pausePlay()"></button>
+<div class="pen-title js-menu-trigger" onclick="firstPlay()">
+  <h1>Tribute to our Melody Queen</h1>
+  <div class="info">Enter</div>
+</div>
 
-<h1>The audio autoplay attribute</h1>
+<div class="menu js-menu">
+  <div class="menu__item">
+    <div class="menu__item__bg-container"></div>
+    <div class="menu__item__content">
+      <a href="#" class="btn-link"></a>
+    </div>
+  </div>
+  <!-- <div class="menu__item">
+    <div class="menu__item__bg-container"></div>
+    <div class="menu__item__content">
+      <a href="#" class="btn-link">About</a>
+    </div>
+  </div> -->
+  <div class="menu__item">
+    <div class="menu__item__bg-container"></div>
+    <div class="menu__item__content">
+      <nav class="main-navigation">
+        <a class="main-navigation__link" href="#"  onclick="songPlay('song1')">Chittukkuruvi</a>
+        <a class="main-navigation__link" href="#"  onclick="songPlay('song2')">Ninaikka Therintha</a>
+        <a class="main-navigation__link" href="#"  onclick="songPlay('song3')">Marainthirunthu</a>
+        <a class="main-navigation__link" href="#"  onclick="songPlay('song4')">Solla Solla</a>
+      </nav>
+    </div>
+  </div>
+  <!-- <div class="menu__item">
+    <div class="menu__item__bg-container"></div>
+    <div class="menu__item__content">
+      <a href="#" class="btn-link">Contact</a>
+    </div>
+  </div>
+  <div class="menu__item">
+    <div class="menu__item__bg-container"></div>
+    <div class="menu__item__content">
+      <a href="#" class="btn-link">More</a>
+    </div>
+  </div> -->
+</div>
 
-<p>Click on the play button to play a sound:</p>
-
-<audio controls autoplay>
-  <source src="audio.ogg" type="audio/ogg">
-  <source src="audio.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 </body>
+<script>
+var song1 = new Audio('audio.mp3');
+var song2 = new Audio('audio2.ogg');
+var song3 = new Audio('audio3.mp3');
+var song4 = new Audio('audio4.wav');
+
+const penTitle = document.querySelector('.pen-title');
+const menu = document.querySelector('.js-menu');
+const menuTrigger = document.querySelectorAll('.js-menu-trigger');
+menuTrigger.forEach(btn => {
+  btn.addEventListener('click', function() {
+    
+    menuTrigger.forEach(b => {
+        
+      b.classList.toggle('menu-trigger--menu-open');
+    });
+    menu.classList.toggle('menu--open');
+  });
+});
+
+function firstPlay(){
+    song1.pause();
+    song1.currentTime=0;
+    song2.pause();
+    song2.currentTime=0;
+    song3.pause();
+    song3.currentTime=0;
+    song4.pause();
+    song4.currentTime=0;
+    song1.play();
+}
+function pausePlay(){
+    song1.pause();
+    song1.currentTime=0;
+    song2.pause();
+    song2.currentTime=0;
+    song3.pause();
+    song3.currentTime=0;
+    song4.pause();
+    song4.currentTime=0;
+    
+}
+
+
+function songPlay(id){
+    song1.pause();
+    song1.currentTime=0;
+    song2.pause();
+    song2.currentTime=0;
+    song3.pause();
+    song3.currentTime=0;
+    song4.pause();
+    song4.currentTime=0;
+    if(id==='song1'){
+        song1.play()
+    }else if(id==='song2'){
+        song2.play()
+    }else if(id==='song3'){
+        song3.play()
+    }else{
+        song4.play()
+    }
+}
+
+
+
+
+</script>
+
 </html>
