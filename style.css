@@ -23,7 +23,7 @@ body {
   text-align: center;
 }
 .pen-title .info {
-  font-size: 10px;
+  font-size: 18px;
   letter-spacing: 3px;
   font-weight: bold;
   color: #ecf445;
@@ -31,7 +31,7 @@ body {
 .pen-title h1 {
   letter-spacing: 4px;
   margin: 2px auto;
-  font-size: 18px;
+  font-size: 30px;
 }
 .pen-title.menu-trigger--menu-open {
   opacity: 0;
