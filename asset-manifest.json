@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b4c7ed7.css",
-    "main.js": "/static/js/main.c14e8716.js",
+    "main.css": "/static/css/main.2e285f9d.css",
+    "main.js": "/static/js/main.ad15af8a.js",
     "static/media/1.png": "/static/media/1.c3a491f1da7490d50b55.png",
     "static/media/4.png": "/static/media/4.3f779ed99558a22aa8d9.png",
+    "static/media/flipkart.svg": "/static/media/flipkart.ae4de62d891ad801245237da49d2076b.svg",
+    "static/media/Tatacliq.png": "/static/media/Tatacliq.a9edbd146b550f2d141a.png",
     "index.html": "/index.html",
-    "main.7b4c7ed7.css.map": "/static/css/main.7b4c7ed7.css.map",
-    "main.c14e8716.js.map": "/static/js/main.c14e8716.js.map"
+    "main.2e285f9d.css.map": "/static/css/main.2e285f9d.css.map",
+    "main.ad15af8a.js.map": "/static/js/main.ad15af8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b4c7ed7.css",
-    "static/js/main.c14e8716.js"
+    "static/css/main.2e285f9d.css",
+    "static/js/main.ad15af8a.js"
   ]
 }
